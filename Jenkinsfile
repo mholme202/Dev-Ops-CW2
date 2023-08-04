@@ -19,10 +19,9 @@ pipeline {
                 // Read Dockerfile content from the repository
                 script {
                     def dockerfileContent = readFile "${REPO_URL}/Dockerfile"
-                    sh "echo '''${dockerfileContent}''' > Dockerfile"
                 }
                 
-                // Build the Docker image and tag it with the desired name
+                // Build the Docker image and tag it
                 script {
                     docker.withRegistry('', DOCKERHUB_CREDENTIALS) {
                         def imageName = 'mholme202/cw2devops'
