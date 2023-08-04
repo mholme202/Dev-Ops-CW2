@@ -10,7 +10,7 @@ pipeline {
         stage('Clone') {
             steps {
                 // Clone the repository
-                checkout([$class: 'GitSCM', branches: [[name: '*/main']], userRemoteConfigs: [[url: REPO_URL]]])
+                checkout([$class: 'GitSCM', branches: [[name: '*/master']], userRemoteConfigs: [[url: REPO_URL]]])
             }
         }
         
