@@ -3,7 +3,7 @@ pipeline {
     
     environment {
         DOCKERHUB_CREDENTIALS = 'mwholme202'
-        REPO_URL = 'https://github.com/mholme202/Dev-Ops-CW2'
+        REPO_URL = 'https://github.com/mholme202/Dev-Ops-CW2.git'
     }
     
     stages {
