@@ -18,7 +18,7 @@ pipeline {
             steps {
                 // Read Dockerfile content from the repository
                 script {
-                    def dockerfileContent = readFile "${REPO_URL}/blob/master/Dockerfile"
+                    def dockerfileContent = readFile "${REPO_URL}/Dockerfile"
                     sh "echo '''${dockerfileContent}''' > Dockerfile"
                 }
                 
